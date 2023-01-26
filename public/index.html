@@ -42,7 +42,102 @@ $('#mar')[0].innerText = '当前播放：'+$('td:eq('+(sum-1)+')')[0].innerText
 
 }
 
-function ststs(b)
+function ststs(b)<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset='UTF-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>网易云音乐 API</title>
+<style>
+button{
+width: 40px;
+/* 宽 */
+height: 40px;
+/* 高 */
+background: #3c88dd;
+/* 背景色 */
+border:none;
+/* 去掉边框 */
+color: white;
+/* 字的颜色 */
+border-radius: 50%;
+/* 50%的圆角 */
+cursor: pointer;
+/* 鼠标悬在上时为手形 */
+transition: 0.5s;
+/* 变化过渡，配合hover用 */
+}
+button:hover{
+/* 鼠标悬在上时背景变色 */
+background: #750f0f;
+}
+</style>
+</head>
+<body>
+<h1>网易云音乐 API</h1>
+  清风温馨提示:当你看到这个页面时,这个服务已经成功跑起来了~
+  <a href="https://binaryify.github.io/NeteaseCloudMusicApi/#/">查看文档</a>
+  <h2>例子:</h2>
+  <ul>
+    <li>1. <a href="./search?keywords=海阔天空">搜索</a></li>
+    <li>2. <a href="./comment/music?id=186016&limit=1">歌曲评论</a></li>
+    <li>3. <a href="./dj/program?rid=336355127">电台节目</a></li>
+  </ul>
+<audio controls id='mymp3'>
+<source src='http://mpge.5nd.com/2023/2023-1-12/3278080/1.mp3' type='audio/mpeg'>
+<!-- 这里可以放很多首，为了省事，我只放了一首歌 -->
+</audio>
+<button id='btplay'>播放</button>
+<button id='btpause'>暂停</button>
+<script>
+var ebtplay = document.querySelector('#btplay');
+var ebtpause = document.querySelector('#btpause');
+var emymp3 = document.querySelector('#mymp3');
+ebtplay.onclick = function () {
+emymp3.play();
+};
+ebtpause.onclick = function () {
+emymp3.pause();
+}
+</script>
+  <style>
+    html,
+    body {
+      height: 100vh;
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      text-align: center;
+      margin-top: 30px;
+      overflow: hidden;
+    }
+
+    * {
+      color: rgb(100, 100, 100);
+    }
+
+    a {
+      color: #42b983;
+    }
+
+    ul,
+    li {
+      margin: 0;
+    }
+
+    ul {
+      margin-left: -40px;
+      line-height: 30px;
+    }
+
+    li {
+      list-style: none;
+    }
+  </style>
+</body>
+</html>
 
 {
 
